@@ -50,20 +50,51 @@
 
   <h1>Groundworx Query Filters – Changelog</h1>
 
-  <h2>Version 1.0.0 – January 2025</h2>
-  <ul>
-    <li>Initial release.</li>
-    <li>Added Filters container block with Query Loop connection.</li>
-    <li>Added Filter Terms block with dropdown, checkbox, and radio display options.</li>
-    <li>Added Filter Text block for keyword search.</li>
-    <li>Added Filter Orderby block for sort controls.</li>
-    <li>Added Filter Submit block for manual filter application.</li>
-    <li>Added Filter Active block to display current filters with remove buttons.</li>
-    <li>URL parameter sync for shareable filtered views.</li>
-    <li>Taxonomy term counts and hierarchical display support.</li>
-  </ul>
+<h3>1.1.1</h3>
+<ul>
+<li>Updated Filter Woo Stock block icon</li>
+</ul>
+<h3>1.1.0</h3>
+<ul>
+<li><strong>New Block:</strong> Filter Active — displays currently applied filters as removable pills with customizable label, layout, and "Clear All" link</li>
+<li><strong>New Block:</strong> Filter Clear — dedicated clear-all button with full border, typography, and spacing support</li>
+<li><strong>New Block:</strong> Filter WooCommerce Price — slider and price tiers modes with custom select/dropdown layouts</li>
+<li><strong>New Block:</strong> Filter WooCommerce Rating — star rating filter with configurable display and "Show Stars" toggle</li>
+<li><strong>New Block:</strong> Filter WooCommerce Stock Status — filter by stock status with single/multiple selection and customizable options</li>
+<li><strong>New Block:</strong> Filter WooCommerce On Sale — checkbox or toggle to filter sale items</li>
+<li><strong>Filter Submit:</strong> Added full border, typography, shadow, and spacing block support</li>
+<li><strong>Filter Clear:</strong> Added full border, typography, shadow, and spacing block support</li>
+<li><strong>Rating Stars:</strong> Stars now inherit text color via <code>currentColor</code> for better theme compatibility</li>
+<li><strong>i18n:</strong> Fixed textdomain to <code>groundworx-query-filters</code> across all blocks and PHP files</li>
+<li><strong>Updater:</strong> Fixed PHP warning for undefined <code>stdClass::$version</code> property in plugin details modal</li>
+</ul>
+<h3>1.0.3</h3>
+<ul>
+<li><strong>Filter Terms:</strong> Fixed filtering on taxonomy archive pages switching the queried object/template/title to the filter taxonomy instead of the archive taxonomy</li>
+<li><strong>Filter Terms:</strong> Renamed URL params for custom taxonomies to <code>{taxonomy}_name</code> / <code>{taxonomy}_id</code> to avoid collisions with WordPress registered query vars</li>
+<li><strong>Filter Terms:</strong> Switched custom taxonomy filtering in inherit mode to use <code>tax_query</code> instead of setting individual taxonomy query vars</li>
+<li><strong>Filter Terms:</strong> Added queried object preservation on taxonomy archives to prevent <code>get_queried_object()</code> from re-resolving to filter taxonomy</li>
+</ul>
+<h3>1.0.2</h3>
+<ul>
+<li><strong>Filter Terms:</strong> Fixed taxonomy dropdown on taxonomy archive templates (<code>taxonomy-{slug}</code>) not showing taxonomies registered only on custom post types</li>
+<li><strong>Filter Terms:</strong> Taxonomy dropdown now detects the archive taxonomy's post types and shows all taxonomies that share those post types</li>
+</ul>
+<h3>1.0.1</h3>
+<ul>
+<li><strong>Filter Orderby:</strong> Added <code>groundworx/filter_orderby_options-{post_type}</code> filter for registering custom sort options via PHP (supports meta fields, multiple sort fields, and callbacks)</li>
+<li><strong>Filter Orderby:</strong> Auto-fix Query Loop's orderBy when switching to a post type that doesn't support the current sort (e.g., resets <code>menu_order</code> to <code>date</code> for posts)</li>
+<li><strong>Filter Orderby:</strong> Fixed defaultOrderBy reset logic to validate independently when post type changes</li>
+</ul>
+<h3>1.0.0</h3>
+<ul>
+<li>Initial release</li>
+<li>Filters container with Query Loop connection</li>
+<li>Filter Terms, Filter Text, Filter Orderby, Filter Submit, and Filter Active blocks</li>
+<li>Multiple display styles and auto-apply support</li>
+</ul>
 
-  <p class="muted">© 2025 Groundworx. All rights reserved.</p>
+  <p class="muted">© 2026 Groundworx. All rights reserved.</p>
 
 </body>
 </html>
