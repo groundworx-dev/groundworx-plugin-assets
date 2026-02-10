@@ -49,7 +49,38 @@
 <body>
 
   <h1>Groundworx Query Filters – Changelog</h1>
-
+<h3>1.2.0</h3>
+<h4>New Features</h4>
+<ul>
+<li><strong>Filter Text:</strong> Autocomplete with two modes — Words (bigram-aware word completion) and Posts (matching post titles as clickable links)</li>
+<li><strong>Filter Text:</strong> Phrase search mode for exact phrase matching</li>
+<li><strong>Filter Text:</strong> Context-aware autocomplete that respects active taxonomy and meta filters</li>
+<li><strong>Filter Text:</strong> Autocomplete includes content toggle — match words from post content in addition to titles</li>
+</ul>
+<h4>Enhancements</h4>
+<ul>
+<li><strong>Filter Text:</strong> Reorganized editor sidebar into three panels — Search Query, Autocomplete, and Label</li>
+<li><strong>Filter Text:</strong> Search clear (×) now always navigates to remove the search param instead of relying on empty-submit</li>
+<li><strong>Filter Woo Price:</strong> Price tier radio list now supports all layout modes (inline, stacked, custom-select, responsive dropdown)</li>
+<li><strong>Filters:</strong> Removed auto-search-while-typing behavior — search now requires explicit Enter or Submit</li>
+</ul>
+<h4>Accessibility</h4>
+<ul>
+<li><strong>Filter Text:</strong> Full WAI-ARIA combobox pattern for autocomplete (role, aria-expanded, aria-controls, aria-activedescendant, aria-autocomplete, live region announcements)</li>
+<li><strong>Filter Text:</strong> Proper label-input association via <code>&lt;label for&gt;</code> and unique IDs</li>
+<li><strong>Filter Terms:</strong> Added <code>aria-label</code> to native select elements</li>
+<li><strong>Filter Orderby:</strong> Added <code>aria-label</code> to native select element</li>
+<li><strong>Filter Woo Price:</strong> Added <code>aria-label</code> to range slider inputs and tier select</li>
+<li><strong>Filter Woo Rating:</strong> Added <code>aria-label</code> to native select element</li>
+<li><strong>Filter Woo Stock:</strong> Added <code>aria-label</code> to native select element</li>
+<li><strong>All blocks:</strong> Ensured unique HTML IDs when multiple Query Loops with filters appear on the same page</li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul>
+<li><strong>Filter Active:</strong> Now recognizes all search key variants (keyword, phrase, extended content)</li>
+<li><strong>Filter Text:</strong> Fixed autocomplete DOM elements not cleaning up during enhanced pagination morphs</li>
+<li><strong>Autocomplete REST endpoint:</strong> Added null safety for posts with empty titles</li>
+</ul>
 <h3>1.1.1</h3>
 <ul>
 <li>Updated Filter Woo Stock block icon</li>
@@ -93,7 +124,6 @@
 <li>Filter Terms, Filter Text, Filter Orderby, Filter Submit, and Filter Active blocks</li>
 <li>Multiple display styles and auto-apply support</li>
 </ul>
-
   <p class="muted">© 2026 Groundworx. All rights reserved.</p>
 
 </body>
