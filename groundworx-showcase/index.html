@@ -48,9 +48,37 @@
 </head>
 <body>
 
-  <h1>Groundworx Showcase – Changelog</h1>
+<h1>Groundworx Showcase – Changelog</h1>
 
-  <h3>1.0.1</h3>
+<h3>2.0.0</h3>
+<ul>
+<li>Migrated carousel frontend from vanilla JS to WordPress Interactivity API (<code>view-flow.js</code>), removed <code>embla-init.js</code></li>
+<li>Full breakpoint-responsive mode switching: carousel modes reinit Embla, flex/grid modes destroy Embla and switch to CSS layout</li>
+<li>Reactive CSS custom property bindings (<code>data-wp-style</code>) for slide size, gap, columns, and fade mode class toggling across breakpoints</li>
+<li>Added carousel effects support (scale, opacity, grayscale) via Interactivity API</li>
+<li>Dynamic Flow block now uses the shared Interactivity API store (matching Static Flow)</li>
+<li>Refactored shared PHP helpers into <code>inc/flow-helpers.php</code> for Static Flow and Dynamic Flow</li>
+<li>Rewrote Dynamic Content <code>view.js</code> to follow the same Interactivity API patterns as <code>view-flow.js</code></li>
+<li>Added <code>large-phone</code> (480px) breakpoint to editor UI for all blocks</li>
+<li>Added Add Slide toolbar button on individual Flow Slide blocks (inserts after current slide)</li>
+<li>Added cross-transforms between all pagination, counter, and progress blocks</li>
+<li>Fixed editor crash when duplicating multiple Flow Slides at once (debounced context propagation)</li>
+<li>Fixed Duration control showing <code>15ms</code> instead of <code>Inherit</code> on breakpoint tabs</li>
+</ul>
+<h3>1.0.1</h3>
+<ul>
+<li>Fixed text domain to use <code>groundworx-showcase</code> consistently across all files</li>
+<li>Added <code>Text Domain</code> header to plugin file</li>
+</ul>
+<h3>1.0.0</h3>
+<ul>
+<li>Initial release</li>
+<li>Dynamic Flow and Static Flow carousel blocks</li>
+<li>Dynamic Content block with grid/flex/list layouts</li>
+<li>Full suite of navigation and pagination blocks</li>
+<li>Embla Carousel integration</li>
+</ul>
+<h3>1.0.1</h3>
 <ul>
 <li>Fixed text domain to use <code>groundworx-showcase</code> consistently across all files</li>
 <li>Added <code>Text Domain</code> header to plugin file</li>
