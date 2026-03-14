@@ -2,7 +2,7 @@
   "name": "Groundworx Foundation",
   "slug": "groundworx-foundation",
   "version": "1.0.0",
-  "download_url": "https://assets.groundworx.dev/groundworx-foundation/groundworx-foundation-1.0.0.zip",
+  "download_url": "https://assets.groundworx.dev/groundworx-foundation/groundworx-foundation.zip",
   "requires": "6.0",
   "tested": "6.7",
   "requires_php": "7.4",
