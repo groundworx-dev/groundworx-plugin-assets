@@ -1,0 +1,17 @@
+{
+  "name": "Groundworx Foundation",
+  "slug": "groundworx-foundation",
+  "version": "1.0.0",
+  "download_url": "https://assets.groundworx.dev/groundworx-foundation/groundworx-foundation-1.0.0.zip",
+  "requires": "6.0",
+  "tested": "6.7",
+  "requires_php": "7.4",
+  "banners": {
+    "low": "https://assets.groundworx.dev/groundworx-foundation/banner-772x250.jpg",
+    "high": "https://assets.groundworx.dev/groundworx-foundation/banner-1544x500.jpg"
+  },
+  "sections": {
+    "description": "Groundworx Foundation provides core post type and taxonomy management for Groundworx plugins.",
+    "changelog_url": "https://assets.groundworx.dev/groundworx-foundation/index.html"
+  }
+}
