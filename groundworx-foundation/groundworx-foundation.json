@@ -1,7 +1,7 @@
 {
   "name": "Groundworx Foundation",
   "slug": "groundworx-foundation",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "download_url": "https://assets.groundworx.dev/groundworx-foundation/groundworx-foundation.zip",
   "requires": "6.0",
   "tested": "6.7",
