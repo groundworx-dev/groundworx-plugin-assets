@@ -48,9 +48,57 @@
 </head>
 <body>
 
-  <h1>Groundworx Cards & Sections – Changelog</h1>
+<h1>Groundworx Cards & Sections – Changelog</h1>
+<h3>2.0.0</h3>
 
-  <h3>1.0.1</h3>
+<h4>New</h4>
+<ul>
+<li>New Video Card block with video background and built-in playback controls</li>
+<li>Video playback control system (play/pause/replay + progress ring) shared across all video-capable blocks</li>
+<li>Video poster image support with auto-generation from video frames</li>
+<li>Featured image support for Card, Card Overlay, and Card Reveal backgrounds</li>
+<li>Automatic contrast detection for Media Card controls based on background brightness</li>
+<li>Interactivity API-based responsive layout for Media Content Split</li>
+<li>Video settings panel in editor (autoplay, loop, muted, play inline)</li>
+<li>Backdrop blur setting for Curtain Raiser overlay</li>
+<li>Settings page under Groundworx admin menu</li>
+</ul>
+
+<h4>Accessibility</h4>
+<ul>
+<li><code>prefers-reduced-motion</code> support across all blocks — disables CSS transitions, GSAP animations, and video autoplay</li>
+<li><code>prefers-reduced-transparency</code> support for Curtain Raiser — overlay becomes opaque, backdrop blur removed</li>
+<li>Card Reveal falls back to touch layout (content always visible) when reduced motion is enabled</li>
+<li>Curtain Raiser hides interactive layer when reduced motion is enabled (shows primary background only)</li>
+<li>Keyboard focus trigger for Card Reveal and Media Card — reveal layers open on tab focus</li>
+<li>Decorative elements (overlay, blur, background video/image) marked with <code>role="presentation"</code></li>
+</ul>
+
+<h4>Improved</h4>
+<ul>
+<li>Consolidated build system with central entry points for editor and frontend</li>
+<li>Animations rewritten to use Interactivity API (replaces individual GSAP animation files)</li>
+<li>Shared components extracted from external package to local plugin</li>
+<li>Media Content Split responsive behavior driven by Interactivity API instead of CSS media queries</li>
+<li>Block registration updated to metadata object pattern for reliable deprecated entry support</li>
+<li>Admin menu restructured with shared Licenses page across all Groundworx plugins</li>
+<li>Improved internationalization across all user-facing strings</li>
+</ul>
+
+<h4>Fixed</h4>
+<ul>
+<li>Block deprecation handlers for Curtain Raiser, Media Card, and Media Section</li>
+<li>Curtain Raiser overlay no longer appears on blocks saved without explicit opacity</li>
+<li>Media Content Split responsive class switching in editor matches frontend behavior</li>
+<li>Text domain corrected to <code>groundworx-cards-sections</code> across all files</li>
+</ul>
+
+<h4>Security</h4>
+<ul>
+<li>Improved output escaping and input sanitization across all blocks</li>
+<li>Added direct access protection to all PHP files</li>
+</ul>
+<h3>1.0.1</h3>
 <ul>
 <li>Fixed text domain to use <code>groundworx-cards-sections</code> consistently across all files</li>
 <li>Added <code>Text Domain</code> header to plugin file</li>
