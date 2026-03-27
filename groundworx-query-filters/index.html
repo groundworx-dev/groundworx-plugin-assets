@@ -48,7 +48,91 @@
 </head>
 <body>
 
-  <h1>Groundworx Query Filters – Changelog</h1>
+<h1>Groundworx Query Filters – Changelog</h1>
+
+<h3>2.1.0</h3>
+<h4>Improvements</h4>
+<ul>
+<li>Consolidated block registration, styles, and interactivity scripts for better performance</li>
+<li>New "Default Order" panel on inherit-mode Query Loop blocks</li>
+<li>Shared Licenses admin page across Groundworx plugins</li>
+<li>REST relevance fallback scoped to post-type endpoints only</li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul>
+<li>Fixed filter-orderby dropdown not closing on radio selection</li>
+<li>Fixed REST orderby fallback breaking taxonomy and user endpoints</li>
+</ul>
+<h3>2.0.1</h3>
+<h4>Bug Fixes</h4>
+<ul>
+<li>Fixed duplicate filter blocks in custom-select dropdowns not showing checked state (namespace scoping issue with Interactivity API)</li>
+<li>Fixed <code>s</code> URL parameter being removed on manual submit when the search input is empty, breaking search page context</li>
+<li>Fixed filter-text clear button auto-submitting when the parent Filters block has autoSubmit disabled</li>
+<li>Fixed WordPress 6.9 Interactivity Router disabling unrelated stylesheets after filter navigation, breaking carousels, backgrounds, and other content outside the query loop</li>
+<li>Fixed <code>category_name</code> and <code>tag</code> array query vars causing warnings in WordPress core functions</li>
+</ul>
+<h4>Enhancements</h4>
+<ul>
+<li><strong>Custom Select Dropdowns:</strong> Auto-close on radio selection for Filter Terms, Filter Orderby, Filter Woo Rating, and Filter Woo Stock</li>
+<li><strong>Default Order:</strong> New always-visible ToolsPanel on Query Loop block for setting default sort order on inherit-mode queries</li>
+<li><strong>Default Order:</strong> Bidirectional sync between Query Loop Default Order panel and Filter Orderby block — changes in either are reflected instantly</li>
+<li><strong>Default Order:</strong> Editor preview now reorders posts when the default order is changed</li>
+<li><strong>Global Search:</strong> Clicking outside no longer collapses the panel when quick links or search results are visible</li>
+<li><strong>Filter Text:</strong> Search clear and submit button colors now inherit form input text color</li>
+</ul>
+<h3>2.0.0</h3>
+<h4>Settings Page</h4>
+<ul>
+<li>New admin settings page under Groundworx menu — all search configuration in one place</li>
+<li>Search Mode toggle: Off (default WordPress search), Suggested Links (standard search with relevance-powered suggestions), or Global (full relevance ranking across global search and Query Loop blocks)</li>
+<li>Post type and taxonomy exclusions with transfer list UI</li>
+<li>Search relevance weights for title, excerpt, taxonomy, and content fields with per-post-type overrides</li>
+<li>Proximity settings: exact phrase boost, nearby words boost with configurable distance, and distant match filtering — all with per-post-type overrides</li>
+<li>Dictionary management with custom words, stems, synonyms, and compound word boost</li>
+<li>Maintenance panel with manual search index rebuild</li>
+<li>License management moved into settings page</li>
+</ul>
+<h4>Global Search</h4>
+<ul>
+<li><strong>New block:</strong> Global Search — site-wide search with inline suggestion results powered by the weighted search index</li>
+<li><strong>New block:</strong> Global Search Dropdown — site-wide search with suggestion dropdown</li>
+<li><strong>New block:</strong> Search Input — search field with label and submit button for Global Search blocks</li>
+<li><strong>New block:</strong> Autocomplete Dropdown — autocomplete suggestions panel for Global Search blocks</li>
+<li><strong>New block:</strong> Suggested Searches — generates keyword phrases from post content, ranked by relevance</li>
+<li><strong>New block:</strong> Search: Post Types — select post types for search suggestions</li>
+<li><strong>New block:</strong> Search: Taxonomies — select taxonomies for search suggestions</li>
+<li><strong>New block:</strong> Search: Profiles — select author roles for search suggestions</li>
+<li><strong>New block:</strong> Suggested Links — container for suggested link results that navigate directly to matching content</li>
+<li><strong>New block:</strong> Quick Links — container for pre-configured links displayed before the user starts typing</li>
+<li><strong>New block:</strong> Link — a single quick link with URL and label</li>
+</ul>
+<h4>Search Index</h4>
+<ul>
+<li>Custom search index with weighted relevance scoring across title, excerpt, taxonomy terms, and content</li>
+<li>Proximity-aware ranking: exact phrase matching, nearby word boosting, and distant match filtering</li>
+<li>Dictionary with stemming and synonym support for improved recall</li>
+<li>Automatic index updates on post create, edit, and delete</li>
+<li>Per-post search exclusion and relevance boost controls via Quick Edit and Bulk Edit</li>
+</ul>
+<h4>Per-Post Search Controls</h4>
+<ul>
+<li>Search boost column in post list tables — adjust individual post relevance from Quick Edit and Bulk Edit</li>
+<li>Exclude from Global Search option per post via Quick Edit and Bulk Edit</li>
+</ul>
+<h4>Enhancements</h4>
+<ul>
+<li>PHP 7.4+ support (previously required PHP 8.2)</li>
+<li><strong>Filter Text</strong> and <strong>Filter Orderby</strong> blocks updated to work with the search index and relevance settings</li>
+<li>Custom select dropdown display option for Filter Terms</li>
+<li>Internationalization: full i18n support with translatable strings across all PHP and JS</li>
+</ul>
+<h4>Breaking Changes</h4>
+<ul>
+<li><strong>Filter Text: Autocomplete modes renamed</strong> — "Words" is now "Suggested Searches" and "Posts" is now "Suggested Links". Existing blocks with autocomplete enabled will need to be re-selected in the block settings.</li>
+<li><strong>Filter Text: Search columns</strong> — The "Include Content" toggle has been replaced with a multi-select Search Columns control (title, content, excerpt). Existing blocks default to searching all three columns.</li>
+<li><strong>Filter Text: Search mode removed</strong> — The keyword/phrase search mode toggle has been removed in favor of the global search index settings.</li>
+</ul>
 <h3>1.2.0</h3>
 <h4>New Features</h4>
 <ul>
@@ -124,7 +208,8 @@
 <li>Filter Terms, Filter Text, Filter Orderby, Filter Submit, and Filter Active blocks</li>
 <li>Multiple display styles and auto-apply support</li>
 </ul>
-  <p class="muted">© 2026 Groundworx. All rights reserved.</p>
+
+<p class="muted">© 2026 Groundworx. All rights reserved.</p>
 
 </body>
 </html>
