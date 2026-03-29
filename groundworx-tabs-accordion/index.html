@@ -48,8 +48,46 @@
 </head>
 <body>
 
-  <h1>Groundworx Tabs & Accordion – Changelog</h1>
-  <h3>1.1.2</h3>
+<h1>Groundworx Tabs & Accordion – Changelog</h1>
+<h3>1.2.0</h3>
+<h4>Accessibility (ADA Compliance)</h4>
+<ul>
+<li>Added visible focus outlines on all trigger buttons</li>
+<li>Added reduced motion support — animations disabled when preferred</li>
+<li>Roving tabindex on tab buttons</li>
+<li>Dynamic tab panel roles for responsive tabs-to-accordion switching</li>
+<li>Proper accordion ARIA pattern with context-driven labels</li>
+<li>Closed panels use inert attribute to prevent keyboard access</li>
+<li>Cleaned up ARIA attributes on non-interactive elements</li>
+</ul>
+<h4>Keyboard Navigation</h4>
+<ul>
+<li>Refactored to use Interactivity API context instead of DOM queries</li>
+<li>Reactive focus management via data-wp-watch callbacks</li>
+<li>Auto-activate on arrow keys only in tabs display mode</li>
+<li>Focus transfers to correct trigger on responsive layout switch</li>
+</ul>
+<h4>SEO</h4>
+<ul>
+<li>Added FAQ and How To structured data (JSON-LD) output</li>
+<li>Schema type selector in inspector: Off / FAQ / How To</li>
+</ul>
+<h4>New Inspector Controls</h4>
+<ul>
+<li>Accessible Name field for screen reader labels</li>
+<li>Structured Data type selector in Accessibility &amp; SEO panel</li>
+</ul>
+<h4>Security</h4>
+<ul>
+<li>Typography inline style values now properly escaped</li>
+</ul>
+<h4>General</h4>
+<ul>
+<li>Updated admin settings and licensing</li>
+<li>Improved build system and asset loading</li>
+<li>Removed unused files</li>
+</ul>
+<h3>1.1.2</h3>
 <ul>
 <li>Fixed editor panel content padding by adding missing `gwx-panel` wrapper to match frontend DOM structure</li>
 </ul>
@@ -78,8 +116,7 @@
 <li>Icon customization options</li>
 <li>WordPress Interactivity API integration</li>
 </ul>
-
-  <p class="muted">© 2026 Groundworx. All rights reserved.</p>
+<p class="muted">© 2026 Groundworx. All rights reserved.</p>
 
 </body>
 </html>
