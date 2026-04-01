@@ -49,7 +49,18 @@
 <body>
 
 <h1>Groundworx Showcase – Changelog</h1>
-
+<h3>2.1.0</h3>
+<ul>
+<li>Added Gallery Flow block with Flow Media inner block for image/video gallery carousels</li>
+<li>Added slide wrapper divs in editor for Gallery Flow (consistent with frontend structure)</li>
+<li>Consolidated all block assets into central editor/style handles (removed per-block file references)</li>
+<li>Refactored all block registrations to use central <code>index.js</code> entry point pattern</li>
+<li>Fixed spacing gap handling for <code>0</code> values (now outputs <code>0px</code> for valid CSS)</li>
+<li>Fixed Dynamic Content gap styles to use EditorStyles utility instead of inline computation</li>
+<li>Improved accessibility: progress bar now has <code>role="progressbar"</code> with dynamic <code>aria-valuenow</code></li>
+<li>Improved accessibility: counter block now announces slide changes via <code>aria-live="polite"</code></li>
+<li>Hardened output escaping for dynamic CSS values in block render callbacks</li>
+</ul>
 <h3>2.0.0</h3>
 <ul>
 <li>Migrated carousel frontend from vanilla JS to WordPress Interactivity API (<code>view-flow.js</code>), removed <code>embla-init.js</code></li>
@@ -92,7 +103,7 @@
 <li>Embla Carousel integration</li>
 </ul>
 
-  <p class="muted">© 2026 Groundworx. All rights reserved.</p>
+<p class="muted">© 2026 Groundworx. All rights reserved.</p>
 
 </body>
 </html>
