@@ -49,8 +49,13 @@
 <body>
 
 <h1>Groundworx Cards & Sections – Changelog</h1>
+<h3>2.0.1</h3>
+<ul>
+<li>Added bidirectional transforms between Video Card and core/video blocks</li>
+<li>Fixed video playback button state not updating when paused by external carousel controls</li>
+<li>Fixed video playback button showing wrong state on initial load when inside an inactive carousel slide</li>
+</ul>
 <h3>2.0.0</h3>
-
 <h4>New</h4>
 <ul>
 <li>New Video Card block with video background and built-in playback controls</li>
@@ -63,7 +68,6 @@
 <li>Backdrop blur setting for Curtain Raiser overlay</li>
 <li>Settings page under Groundworx admin menu</li>
 </ul>
-
 <h4>Accessibility</h4>
 <ul>
 <li><code>prefers-reduced-motion</code> support across all blocks — disables CSS transitions, GSAP animations, and video autoplay</li>
@@ -73,7 +77,6 @@
 <li>Keyboard focus trigger for Card Reveal and Media Card — reveal layers open on tab focus</li>
 <li>Decorative elements (overlay, blur, background video/image) marked with <code>role="presentation"</code></li>
 </ul>
-
 <h4>Improved</h4>
 <ul>
 <li>Consolidated build system with central entry points for editor and frontend</li>
@@ -84,7 +87,6 @@
 <li>Admin menu restructured with shared Licenses page across all Groundworx plugins</li>
 <li>Improved internationalization across all user-facing strings</li>
 </ul>
-
 <h4>Fixed</h4>
 <ul>
 <li>Block deprecation handlers for Curtain Raiser, Media Card, and Media Section</li>
@@ -92,7 +94,6 @@
 <li>Media Content Split responsive class switching in editor matches frontend behavior</li>
 <li>Text domain corrected to <code>groundworx-cards-sections</code> across all files</li>
 </ul>
-
 <h4>Security</h4>
 <ul>
 <li>Improved output escaping and input sanitization across all blocks</li>
@@ -111,7 +112,7 @@
 <li>Featured image support for Query Loop integration</li>
 </ul>
 
-  <p class="muted">© 2026 Groundworx. All rights reserved.</p>
+<p class="muted">© 2026 Groundworx. All rights reserved.</p>
 
 </body>
 </html>
