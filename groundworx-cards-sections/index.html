@@ -49,6 +49,15 @@
 <body>
 
 <h1>Groundworx Cards & Sections – Changelog</h1>
+<h3>2.1.1</h3>
+<h4>Fixed</h4>
+<ul>
+<li>Dialog inner blocks now receive the dialog post's <code>postId</code>/<code>postType</code> via block context. Cards rendered inside a dialog (Info Card, Card, Media Card, etc.) previously resolved to the hosting page's post ID because <code>do_blocks()</code> does not derive block context from <code>global $post</code>. Now wired through the <code>render_block_context</code> filter during footer rendering.</li>
+</ul>
+<h4>Editor</h4>
+<ul>
+<li>Added custom icons for Dialog, Dialog Window, Dialog Header, Dialog Content, and Video Dialog blocks (previously showed the default block icon).</li>
+</ul>
 <h3>2.1.0</h3>
 <h4>New</h4>
 <ul>

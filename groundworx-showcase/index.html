@@ -49,6 +49,22 @@
 <body>
 
 <h1>Groundworx Showcase – Changelog</h1>
+<h3>2.3.1</h3>
+<ul>
+<li>Fixed: <strong>Overflow Visible</strong> setting was not applied in the editor for <strong>Dynamic Flow</strong> and <strong>Gallery Flow</strong>. Previously only <strong>Static Flow</strong> honored the toggle in the editor; now all three match frontend behavior.</li>
+</ul>
+<h3>2.3.0</h3>
+<ul>
+<li>Authors can now name a carousel and individual slides for accessibility. The carousel name cascades into arrow, playback, and pagination labels automatically, and slide titles flow into pagination dot labels.</li>
+<li>Autoplay now pauses when the carousel scrolls out of view and resumes when it returns.</li>
+<li>Autoplay pauses when a keyboard or screen reader user lands on slide content, so reading isn't interrupted.</li>
+<li>Hover-pause now applies only when hovering the slides area. Hovering navigation controls no longer interrupts playback.</li>
+<li>Carousels without any navigation blocks become keyboard-navigable: tab onto the carousel, use arrow keys (plus Home/End) to step through slides.</li>
+<li>Slide counter no longer announces on every autoplay advance — only on user-initiated slide changes, so screen readers aren't spammed during autoplay.</li>
+<li>Slide semantics adapt to configuration: slides are tabpanels when pagination exists and list items when it doesn't. In flex/grid breakpoints they become plain list items regardless.</li>
+<li><strong>Flow Playback</strong> now hides on the frontend when the parent flow uses auto-scroll and appears dimmed in the editor so authors see it's inapplicable.</li>
+<li>All derived labels share a single source of truth, making translations simpler.</li>
+</ul>
 <h3>2.2.0</h3>
 <ul>
 <li>Added <strong>Flow Playback</strong> block — animated progress dots with play/pause/replay controls that sync with carousel autoplay</li>
@@ -69,6 +85,10 @@
 <li>Improved accessibility: progress bar now has <code>role="progressbar"</code> with dynamic <code>aria-valuenow</code></li>
 <li>Improved accessibility: counter block now announces slide changes via <code>aria-live="polite"</code></li>
 <li>Hardened output escaping for dynamic CSS values in block render callbacks</li>
+</ul>
+<h3>2.0.1</h3>
+<ul>
+<li>Switched asset versioning to use plugin version for reliable cache busting on updates</li>
 </ul>
 <h3>2.0.0</h3>
 <ul>
